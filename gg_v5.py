@@ -86,7 +86,7 @@ class Game():
         if event.keysym == "Right": self.current_shape.move(1, 0)
         if event.keysym == "Down": self.current_shape.move(0, 1)
         if event.keysym == "Up": self.current_shape.rotate()
-        if event.keysym == "p": time.sleep(30)
+        # if event.keysym == "p": time.sleep(30)
 
     def is_game_over(self):
         '''Check if a newly created shape is able to fall.
