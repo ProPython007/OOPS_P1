@@ -165,16 +165,16 @@ class Game():
 
 
     def game_over(self):
-            messagebox.showinfo("Game Over", "You scored %d points." % self.score)
-            self.canvas.delete(tkinter.ALL)
-            self.level = 1
-            self.score = 0
-            self.counter = 0
-            self.speed = 500
-            self.status_var.set("Level: %d, Score: %d" % (self.level, self.score))
-            self.v_line = self.canvas.create_line(Game.WIDTH + 1, 0, Game.WIDTH + 1, Game.HEIGHT, fill='white', width=2)
-            self.h_line = self.canvas.create_line(0, 1, Game.WIDTH + Game.EXTENDED_WIDTH, 1, fill='white')
-            # self.b_line = self.canvas.create_line(0, Game.HEIGHT, Game.WIDTH + 200, Game.HEIGHT, fill='white')
+        messagebox.showinfo("Game Over", "You scored %d points." % self.score)
+        self.canvas.delete(tkinter.ALL)
+        self.level = 1
+        self.score = 0
+        self.counter = 0
+        self.speed = 500
+        self.status_var.set("Level: %d, Score: %d" % (self.level, self.score))
+        self.v_line = self.canvas.create_line(Game.WIDTH + 1, 0, Game.WIDTH + 1, Game.HEIGHT, fill='white', width=2)
+        self.h_line = self.canvas.create_line(0, 1, Game.WIDTH + Game.EXTENDED_WIDTH, 1, fill='white')
+        # self.b_line = self.canvas.create_line(0, Game.HEIGHT, Game.WIDTH + 200, Game.HEIGHT, fill='white')
 
 
 
