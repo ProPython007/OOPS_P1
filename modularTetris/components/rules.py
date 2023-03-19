@@ -12,7 +12,7 @@ class Game():
         if self.create_new_game == True:
             self.current_shape = Shape(self.canvas)
             self.create_new_game = False
-            pygame.mixer.music.load("8bit-music-for-game-68698.mp3")
+            pygame.mixer.music.load("/assets/8bit-music-for-game-68698.mp3")
             pygame.mixer.music.play(-1)
 
         if not self.current_shape.fall():
@@ -20,12 +20,14 @@ class Game():
             if lines:
                 self.score += 10 * self.level**2 * lines**2
                 self.status_var.set("Level: %d, Score: %d" % (self.level, self.score))
-                pygame.mixer.Channel(0).play(pygame.mixer.Sound('soundeffect.mp3'))
-                pygame.mixer.Channel(1).play(pygame.mixer.Sound('8bit-music-for-game-68698.mp3'))
+                pygame.mixer.Channel(0).play(pygame.mixer.Sound('/assets/soundeffect.mp3'))
+                pygame.mixer.Channel(1).play(pygame.mixer.Sound('/assets/8bit-music-for-game-68698.mp3'))
             self.current_shape = Shape(self.canvas) # rendering a new shape into the canvas
 
             if self.is_game_over(): 
                 self.create_new_game = True
+                pygame.mixer.music.load("/assets/succ.mp3")
+                pygame.mixer.music.play()
                 self.game_over()
 
             self.counter += 1
