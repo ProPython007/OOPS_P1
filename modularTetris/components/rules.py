@@ -43,20 +43,16 @@ class Game():
         '''Handle all user events.'''
         if event.keysym == "Left": 
             self.current_shape.move(-1, 0)
-            pygame.mixer.music.load("./assets/nor.mp3")
-            pygame.mixer.music.play()
+            
         if event.keysym == "Right": 
             self.current_shape.move(1, 0)
-            pygame.mixer.music.load("./assets/nor.mp3")
-            pygame.mixer.music.play()
+           
         if event.keysym == "Down": 
             self.current_shape.move(0, 1)
-            pygame.mixer.music.load("./assets/nor.mp3")
-            pygame.mixer.music.play()
+            
         if event.keysym == "Up": 
             self.current_shape.rotate()
-            pygame.mixer.music.load("./assets/nor.mp3")
-            pygame.mixer.music.play()
+            
         # if event.keysym == "p": time.sleep(30)
 
     def is_game_over(self):
